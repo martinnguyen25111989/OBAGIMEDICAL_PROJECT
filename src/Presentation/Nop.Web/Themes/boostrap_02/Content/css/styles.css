@@ -1,215 +1,61 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url(../fonts/cx_icons-stroke_ver01/style.css);
 
+/***/
+/* This is a stylization for a certain example, you can stylize it for your own layout */
 
+  .cx_change-photos .change-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
+  /* Hiding the second picture right away */
+  .cx_change-photos .change-photo:nth-of-type(2) {
+    display: none;
+  }
 
-@font-face {
-  font-family: 'annasdrapery';
-  src:  url('../fonts/annasdrapery-v1.0/fonts/annasdrapery.eot?tffoaa');
-  src:  url('../fonts/annasdrapery-v1.0/fonts/annasdrapery.eot?tffoaa#iefix') format('embedded-opentype'),
-    url('../fonts/annasdrapery-v1.0/fonts/annasdrapery.ttf?tffoaa') format('truetype'),
-    url('../fonts/annasdrapery-v1.0/fonts/annasdrapery.woff?tffoaa') format('woff'),
-    url('../fonts/annasdrapery-v1.0/fonts/annasdrapery.svg?tffoaa#annasdrapery') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+  /* When you hover your cursor over the parent change-photos class, the first picture is hidden, and the second is shown */
+
+  .cx_change-photos:hover .change-photo:nth-of-type(1) {
+    display: none;
+  }
+
+  .cx_change-photos:hover .change-photo:nth-of-type(2) {
+    display: block;
+  }
+
+  .cx_change-photos:hover {
+    cursor: pointer;
+  }
+/* ---- grid ---- */
+
+.cx_grid-msr {
+  position: relative;
+  max-width: 1200px;
 }
 
-[class^="anna-icon-"], [class*=" anna-icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'annasdrapery' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 18px;
-  vertical-align: middle;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* clearfix */
+.cx_grid-msr:after {
+  content: '';
+  display: block;
+  clear: both;
 }
-.anna-icon-rss-fill:before {
-  content: "\e911";
+.grid-item, .grid-sizer {
+  max-width: 33.333333%;
 }
-
-.anna-icon-twitter:before {
-  content: "\e912";
+/* position stamp elements with CSS */
+.stamp {
+  position: absolute;
 }
-
-.anna-icon-home:before {
-  content: "\e921";
-}
-
-.anna-icon-collections:before {
-  content: "\e91d";
-}
-
-.anna-icon-alternate_email:before {
-  content: "\e913";
-}
-
-.anna-icon-compare_arrow:before {
-  content: "\e914";
-}
-
-.anna-icon-person_black:before {
-  content: "\e910";
-}
-
-.anna-icon-grid_view:before {
-  content: "\e906";
-}
-
-.anna-icon-view_agenda:before {
-  content: "\e907";
-}
-
-.anna-icon-edit:before {
-  content: "\e92a";
-}
-
-.anna-icon-admin_panel_settings:before {
-  content: "\e929";
-}
-
-.anna-icon-chair-reupholstery:before {
-  content: "\e927";
-}
-
-.anna-icon-mattress:before {
-  content: "\e928";
-}
-
-.anna-icon-visibility-off:before {
-  content: "\e922";
-}
-
-.anna-icon-visibility:before {
-  content: "\e923";
-}
-
-.anna-icon-check:before {
-  content: "\e924";
-}
-
-.anna-icon-lock:before {
-  content: "\e925";
-}
-
-.anna-icon-arrow_drop_down:before {
-  content: "\e926";
-}
-
-.anna-icon-search:before {
-  content: "\e91e";
-}
-
-.anna-icon-info:before {
-  content: "\e91f";
-}
-
-.anna-icon-help:before {
-  content: "\e920";
-}
-
-.anna-icon-confirmation_coupon:before {
-  content: "\e91b";
-}
-
-.anna-icon-gift-card:before {
-  content: "\e91c";
-}
-
-.anna-icon-done_all:before {
-  content: "\e917";
-}
-
-.anna-icon-credit_card:before {
-  content: "\e918";
-}
-
-.anna-icon-refresh:before {
-  content: "\e919";
-}
-
-.anna-icon-cancel:before {
-  content: "\e91a";
-}
-
-.anna-icon-east-left:before {
-  content: "\e915";
-}
-
-.anna-icon-east-right:before {
-  content: "\e916";
-}
-
-.anna-icon-facebook:before {
-  content: "\e90d";
-}
-
-.anna-icon-youtube:before {
-  content: "\e90e";
-}
-
-.anna-icon-send:before {
-  content: "\e90f";
-}
-
-.anna-icon-currency_exchange:before {
-  content: "\e908";
-}
-
-.anna-icon-local_shipping:before {
-  content: "\e909";
-}
-
-.anna-icon-verified_user:before {
-  content: "\e90a";
-}
-
-.anna-icon-call:before {
-  content: "\e90b";
-}
-
-.anna-icon-shopping_bag:before {
-  content: "\e90c";
-}
-
-.anna-icon-bathtub:before {
-  content: "\e900";
-}
-
-.anna-icon-chair:before {
-  content: "\e901";
-}
-
-.anna-icon-home_work:before {
-  content: "\e902";
-}
-
-.anna-icon-kitchen:before {
-  content: "\e903";
-}
-
-.anna-icon-local_dining:before {
-  content: "\e904";
-}
-
-.anna-icon-single_bed:before {
-  content: "\e905";
-}
-
-
-
-
+  .stamp.cx_gird-featured-box {
+    left: 33.333333%;
+    top: 24px;
+    width: 33.222222%;
+    max-width: 33.222222%;
+  }
 /*********** CSS RESET **********/
-
-
 * {
   margin: 0;
   padding: 0;

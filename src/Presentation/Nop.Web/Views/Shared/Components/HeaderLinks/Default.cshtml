@@ -7,7 +7,7 @@
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
         @if (Model.IsAuthenticated)
         {
-            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1"><i class="icon-person"></i> @T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
             <li><a href="@Url.RouteUrl("Logout")" class="ico-logout navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">@T("Account.Logout")</a></li>
         }
         else
