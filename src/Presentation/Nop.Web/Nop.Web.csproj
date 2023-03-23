@@ -31,18 +31,49 @@
     <!-- We copy the entire \App_Data directory. But we ignore JSON files and data protection keys  -->
     <Content Include="App_Data\**" CopyToPublishDirectory="PreserveNewest" Exclude="App_Data\*.json" />
     <Content Remove="App_Data\*.json" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\**" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\**" />
     <Content Update="App_Data\DataProtectionKeys\*.xml" CopyToPublishDirectory="Never" />
 
     <Compile Remove="Plugins\**;Themes\**" />
+
+    <Compile Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\**" />
+
+    <Compile Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\**" />
     <Content Remove="Plugins\**;Themes\**" />
     <EmbeddedResource Remove="Plugins\**;Themes\**" />
+    <EmbeddedResource Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\**" />
+    <EmbeddedResource Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\**" />
     <None Remove="Plugins\**;Themes\**" />
+    <None Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\**" />
+    <None Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\**" />
     <None Include="Plugins\**" CopyToPublishDirectory="PreserveNewest" Exclude="Plugins\**\runtimes\**;Plugins\**\ref\**;Plugins\**\*.pdb" />
 
     <Content Include="Themes\**" CopyToPublishDirectory="PreserveNewest" CopyToOutputDirectory="Never" />
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <Content Remove="Themes\boostrap_02\catalogs.json" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\demo-files\demo.css" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\demo-files\demo.js" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\demo.html" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\fonts\annasdrapery.eot" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\fonts\annasdrapery.svg" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\fonts\annasdrapery.ttf" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\fonts\annasdrapery.woff" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\Read Me.txt" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\selection.json" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\annasdrapery-v1.0\style.css" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\demo-files\demo.css" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\demo-files\demo.js" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\demo.html" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\fonts\icomoon.eot" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\fonts\icomoon.svg" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\fonts\icomoon.ttf" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\fonts\icomoon.woff" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\Read Me.txt" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\selection.json" />
+    <Content Remove="Themes\boostrap_02\Content\fonts\icomoon-v1.0\style.css" />
     <None Remove="Plugins\Uploaded\placeholder.txt" />
     <Content Include="Plugins\Uploaded\placeholder.txt">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -61,6 +92,10 @@
     in order to avoid the "Duplicate dll" error during publication. 
     We can also use “ExcludeConfigFilesFromBuildOutput” according to https://github.com/aspnet/AspNetCore/issues/14017 -->
     <Content Update="**\*.config;**\*.json" CopyToOutputDirectory="Never" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\boostrap_02\Content\fonts\" />
   </ItemGroup>
 
   <!-- This target execute after "Build" target.

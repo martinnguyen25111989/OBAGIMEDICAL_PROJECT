@@ -46,12 +46,12 @@
         </li>
     }
 }
-
-<ul class="top-menu notmobile">
+<div class="container">
+    <ul class="top-menu notmobile navbar-nav mx-auto">
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuBefore, additionalData = Model })
     @if (Model.DisplayHomepageMenuItem)
     {
-        <li><a href="@Url.RouteUrl("Homepage")">@T("Homepage")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("Homepage")" class="nav-link">@T("Homepage")</a></li>
     }
     @if (!Model.UseAjaxMenu)
     {
@@ -68,34 +68,36 @@
     }
     @foreach (var topic in Model.Topics)
     {
-        <li><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))">@topic.Name</a></li>
+            <li class="nav-item"><a href="@(Url.RouteUrl<Topic>(new { SeName = topic.SeName }))" class="nav-link">@topic.Name</a></li>
     }
     @if (Model.NewProductsEnabled && Model.DisplayNewProductsMenuItem)
     {
-        <li><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("NewProducts")" class="nav-link">@T("Products.NewProducts")</a></li>
     }
     @if (Model.DisplayProductSearchMenuItem)
     {
-        <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("ProductSearch")" class="nav-link">@T("Search")</a></li>
     }
     @if (Model.DisplayCustomerInfoMenuItem)
     {
-        <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("CustomerInfo")" class="nav-link">@T("Account.MyAccount")</a></li>
     }
     @if (Model.BlogEnabled && Model.DisplayBlogMenuItem)
     {
-        <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("Blog")" class="nav-link">@T("Blog")</a></li>
     }
     @if (Model.ForumEnabled && Model.DisplayForumsMenuItem)
     {
-        <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("Boards")" class="nav-link">@T("Forum.Forums")</a></li>
     }
     @if (Model.DisplayContactUsMenuItem)
     {
-        <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+            <li class="nav-item"><a href="@Url.RouteUrl("ContactUs")" class="nav-link">@T("ContactUs")</a></li>
     }
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderMenuAfter, additionalData = Model })
 </ul>
+</div>
+
 @{
     var rootCategoriesResponsive = Model.Categories.ToList();
     //name it "Categories" if we have only categories. Otherwise, "Menu"

@@ -2,13 +2,13 @@
 @using Nop.Core.Domain.Customers
 @inject Nop.Core.IWebHelper webHelper
 
-<div class="header-links">
-    <ul>
+<div class="navbar-toolbar d-flex flex-shrink-0 align-items-center ms-xl-2">
+    <ul class="d-flex mb-0">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
         @if (Model.IsAuthenticated)
         {
-            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
-            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout">@T("Account.Logout")</a></li>
+            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1">@T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">@T("Account.Logout")</a></li>
         }
         else
         {
@@ -34,7 +34,7 @@
         @if (Model.WishlistEnabled)
         {
             <li>
-                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
+                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">
                     <span class="wishlist-label">@T("Wishlist")</span>
                     <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
                 </a>
@@ -42,8 +42,8 @@
         }
         @if (Model.ShoppingCartEnabled)
         {
-            <li id="topcartlink">
-                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
+            <li id="topcartlink" class="navbar-tool dropdown ml-2">
+                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart navbar-tool-icon-box btn btn-light bg-transparent dropdown-toggle no-arrow py-2">
                     <span class="cart-label">@T("ShoppingCart")</span>
                     <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 </a>
