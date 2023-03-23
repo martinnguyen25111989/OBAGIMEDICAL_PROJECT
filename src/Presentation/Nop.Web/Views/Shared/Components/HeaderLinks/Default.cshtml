@@ -7,7 +7,16 @@
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
         @if (Model.IsAuthenticated)
         {
-            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1"><i class="icon-person"></i> @T("Account.MyAccount")@*@Model.CustomerName*@</a></li>
+            <li>
+                            
+                <a href="@Url.RouteUrl("CustomerInfo")" class="navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1">
+                <div class="navbar-tool-icon-box">
+                    <i class="navbar-tool-icon icon-person"></i>
+                </div>
+                <div class="navbar-tool-text"><small>Hello!</small>@T("Account.MyAccount")</div>
+                    @*@Model.CustomerName*@
+                </a>
+            </li>
             <li><a href="@Url.RouteUrl("Logout")" class="ico-logout navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">@T("Account.Logout")</a></li>
         }
         else
@@ -42,9 +51,9 @@
         }
         @if (Model.ShoppingCartEnabled)
         {
-            <li id="topcartlink" class="navbar-tool dropdown ml-2">
-                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart navbar-tool-icon-box btn btn-light bg-transparent dropdown-toggle no-arrow py-2">
-                    <span class="cart-label">@T("ShoppingCart")</span>
+            <li id="topcartlink" class="navbar-tool ml-2">
+                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart navbar-tool-icon-box btn btn-light bg-transparent py-2">
+                    @*<span class="cart-label">@T("ShoppingCart")</span>*@
                     <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 </a>
             </li>
