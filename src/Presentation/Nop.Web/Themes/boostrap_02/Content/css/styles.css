@@ -494,9 +494,44 @@
 
 .flyout-cart {
   opacity:0;
-  visibility:hidden
+  visibility:hidden;
 }
-@media (min-width: 1001px){
+.cx_wg-cart-in {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch !important;
+  flex-shrink: 0 !important;
+}
+.cx_wg-cart-head, .cx_wg-cart-body, .cx_wg-cart-foot {
+  padding: 1em;
+  font-size: 0.8em;
+}
+.cx_wg-cart-body {
+  overflow-y: auto;
+  flex: 1;
+}
+.cx_wg-cart-body .media, .cx_rec-product-in .media{
+  margin-top: 1em;
+}
+.cx_wg-cart-body .media:first-child, .cx_rec-product-in .media:first-child{
+  margin-top:0
+}
+.cx_wg-cart-body .name a, .cx_rec-product-in .name > a{
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cx_wg-cart-body .price, .cx_wg-cart-body .quantity, .cx_wg-cart-body .attributes, .cx_rec-product-in{
+  font-size: 0.8em;
+}
+.cx_wg-cart-foot .buttons{
+    padding-top:1em
+}
+.text-max-width-100 {
+  max-width: 50px;
+}
+@media (min-width: 1001px) {
   .flyout-cart.active {
     opacity: 1;
     visibility:visible;
@@ -514,7 +549,6 @@
     transition: all .75s ease;
   }
 }
-
 /*********** CSS RESET **********/
 * {
   margin: 0;
@@ -1094,52 +1128,7 @@ left: 23px;
 .no-arrow.dropdown-toggle::after{
   display: none;
 }
-.cx_wg-cart{
-  min-width: 300px !important;
-}
-.cx_wg-cart-head{
-  padding: 5px 10px 10px;
-  
-}
-.cx_wg-cart-body{
-  padding: 5px 10px;
-}
-.cx_wg-cart-head,.cx_wg-cart-body{
-  font-size: 0.8em;
-}
-.cx_wg-cart-body{
-  flex:1 auto;
-  max-height: 200px;
-overflow: auto;
 
-}
-.cx_wg-cart-foot{
-  padding:10px;
-}
-.cx_wg-cart-buttons{
-  padding: 10px 0 0;
-}
-.cx_wg-cart-body .media, .cx_rec-product-in .media{
-  margin-top: 1em;
-}
-.cx_wg-cart-body .media:first-child, .cx_rec-product-in .media:first-child{
-  margin-top:0
-}
-.cx_wg-cart-body .name a, .cx_rec-product-in .name > a{
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-}
-.cx_wg-cart-body .price, .cx_wg-cart-body .quantity, .cx_rec-product-in{
-  font-size: 0.8em;
-}
-.cx_wg-cart-in{ display: flex; flex-direction: column;}
-.cx_cart-bottom{
-    padding:1rem 0
-}
-.cx_cart-bottom .cart-options  .common-buttons{
-  margin-bottom: 1.5rem;
-}
 .products-wrapper .no-result, .order-summary-content .no-data, .account-page .no-data, .wishlist-page .no-data, .no-shipping-options {
   font-weight: 400;
   font-size: 0.8em;
