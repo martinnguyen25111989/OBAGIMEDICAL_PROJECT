@@ -493,22 +493,28 @@
   }
 
 .flyout-cart {
-  display: none;
+  opacity:0;
+  visibility:hidden
 }
 @media (min-width: 1001px){
   .flyout-cart.active {
-    display: block;
+    opacity: 1;
+    visibility:visible;
+    right:0;
   }
   .flyout-cart {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: fixed;
+    top: 0;
+    right: -300px;
     z-index: 100;
     width: 300px;
+    height:100%;
     box-shadow: 0 0 2px rgba(0,0,0,.25);
     background-color: #fff;
+    transition: all .75s ease;
   }
-} 
+}
+
 /*********** CSS RESET **********/
 * {
   margin: 0;

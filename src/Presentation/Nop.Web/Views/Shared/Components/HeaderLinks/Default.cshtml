@@ -13,7 +13,7 @@
                 <div class="navbar-tool-icon-box">
                     <i class="navbar-tool-icon icon-person"></i>
                 </div>
-                <div class="navbar-tool-text"><small>Hello!</small>@T("Account.MyAccount")</div>
+                <div class="navbar-tool-text text-start"><small>Hello!</small>@T("Account.MyAccount")</div>
                     @*@Model.CustomerName*@
                 </a>
             </li>
@@ -56,6 +56,7 @@
                     @*<span class="cart-label">@T("ShoppingCart")</span>*@
                     <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 </a>
+
             </li>
         }
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksAfter, additionalData = Model })
