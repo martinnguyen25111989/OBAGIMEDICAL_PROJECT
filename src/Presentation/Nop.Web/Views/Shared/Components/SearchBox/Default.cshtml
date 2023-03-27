@@ -1,10 +1,18 @@
 ﻿@model SearchBoxModel
-<form asp-route="ProductSearch" method="get" id="small-search-box-form">
+<form asp-route="ProductSearch" method="get" id="small-search-box-form" class="input-group">
     @if (Model.ShowSearchBox)
     {
-        <input type="text" class="search-box-text" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" aria-label="@T("Search.SearchBox.Text.Label")" />
+        <input type="text" class="search-box-text form-control border-right-0" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" aria-label="@T("Search.SearchBox.Text.Label")" />
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.SearchBoxBeforeSearchButton, additionalData = Model })
-        <button type="submit" class="button-1 search-box-button">@T("Search.Button")</button>
+        <div class="input-group-append">
+            <button type="button" class="button-1 close-search-box-button btn btn-outline-secondary border-left-0" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false">
+                <span class="icon-close"></span>
+            </button>
+            <button type="submit" class="button-1 search-box-button btn btn-outline-secondary" title="@T("Search.Button")">
+                <span class="icon-search"></span>
+            </button>
+        </div>
+        
         @if (Model.SearchTermMinimumLength > 0)
         {
             <script asp-location="Footer">
@@ -53,6 +61,11 @@
                             .append("<a>@(Model.ShowProductImagesInSearchAutoComplete ? Html.Raw("<img src='\" + item.productpictureurl + \"'>") : null)<span>" + t + "</span></a>")
                             .appendTo(ul);
                     };
+
+                    $('.close-search-box-button').on('click', function () {
+                        $(this).collapse('hide');
+                    });
+
                 });
             </script>
         }

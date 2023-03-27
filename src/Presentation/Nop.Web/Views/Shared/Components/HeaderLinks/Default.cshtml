@@ -34,7 +34,7 @@
         @if (Model.AllowPrivateMessages)
         {
             <li>
-                <a href="@Url.RouteUrl("PrivateMessages", new { tab = "" })" class="ico-inbox">
+                <a href="@Url.RouteUrl("PrivateMessages", new { tab = "" })" class="ico-inbox navbar-tool-icon-box btn btn-light bg-transparent py-2">
                     <span class="inbox-label">@T("PrivateMessages.Inbox")</span>
                     <span class="inbox-unread">@Model.UnreadPrivateMessages</span>
                 </a>
@@ -42,10 +42,11 @@
         }
         @if (Model.WishlistEnabled)
         {
-            <li>
-                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">
-                    <span class="wishlist-label">@T("Wishlist")</span>
-                    <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
+            <li class="navbar-tool">
+                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist navbar-tool-icon-box btn btn-light bg-transparent py-2">
+                   @*<span class="wishlist-label">@T("Wishlist")</span>*@
+                    <span class="navbar-tool-icon icon-favorite"></span>
+                    <span class="wishlist-qty cx_navbar-tool-label">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
                 </a>
             </li>
         }
@@ -54,11 +55,17 @@
             <li id="topcartlink" class="navbar-tool ml-2">
                 <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart navbar-tool-icon-box btn btn-light bg-transparent py-2">
                     @*<span class="cart-label">@T("ShoppingCart")</span>*@
-                    <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
+                    <span class="navbar-tool-icon icon-shopping_bag"></span>
+                    <span class="cart-qty cx_navbar-tool-label">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 </a>
 
             </li>
         }
+        <li class="navbar-tool ml-2">
+            <a href="#collapseSearch" class="navbar-tool-icon-box btn btn-light bg-transparent py-2" data-toggle="collapse" aria-expanded="false">
+                <span class="icon-search"></span>
+            </a>
+        </li>
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksAfter, additionalData = Model })
     </ul>
     @if (Model.AllowPrivateMessages && !string.IsNullOrEmpty(Model.AlertMessage))
