@@ -150,13 +150,13 @@
 .header-menu .sublist li{position:relative}
 .header-menu .sublist li a{display:block;position:relative;padding:10px 20px 10px 30px;font-size:14px;color:#444}
 .header-menu .sublist li a:before{content:"";position:absolute;top:17px;left:15px;width:5px;height:5px;background-color:#ddd}
-.header-menu .sublist li:hover > a,.header-menu .sublist li:focus > a{background-color:#f6f6f6}
+.header-menu .sublist li:hover > a,.header-menu .sublist li:focus > a{background-color:#F6F9FF}
 .header-menu ul li:hover > .sublist,.header-menu ul li:focus > .sublist{display:block}
 .header-menu .sublist .sublist{top:-10px;left:100%!important}
 }
 .top-menu.notmobile > li a{text-decoration:none}
 .top-menu.notmobile > li > a{color:#051C2C;padding:0 15px;font-size: 12px;font-weight: 500;text-transform: uppercase; letter-spacing:1px}
-.cx_box-search-mb {position: fixed;z-index: 6;left: 23%;}
+.cx_box-search-mb {position: fixed !important;z-index: 6;left: 23%;}
 *{margin:0;padding:0;text-decoration:none}
 *,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html,body{overflow-x:hidden}
@@ -165,7 +165,7 @@ ol,ul{list-style:none}
 a img{border:none}
 .w-105{width:105px!important}
 .mw-150{min-width:150px}
-.navbar-brand{max-width:205px}
+.navbar-brand{max-width:90px}
 .navbar .cx_lan-label{display:none}
 .btn-group-lg > .btn,.btn-lg{font-weight:600!important;font-size:1rem!important}
 .input-group-icon .btn,.input-group-icon .form-control{border-radius:0!important}
@@ -265,9 +265,10 @@ img{max-width:100%;height:auto;vertical-align:middle}
 .cx_devide{position:relative;display:flex;align-items:center}
 .cx_devide:before{content:"|"}
 .cx_currency-selector,.cx_language-selector{padding:0 5px}
-.cx_currency-selector .form-control,.cx_language-selector .form-control,.cx_currency-selector .custom-select,.cx_language-selector .custom-select,.header-upper .input-group .input-group-text{background-color:rgba(255,255,255,0);border-color:rgba(255,255,255,0.9);font-size:.8em}
+.cx_currency-selector .form-control,.cx_language-selector .form-control,.cx_currency-selector .custom-select,.cx_language-selector .custom-select,.header-upper .input-group .input-group-text{background-color:rgba(255,255,255,0);border-color:rgba(255,255,255,0.3);font-size:.8em}
 .header-upper .cx_currency-selector .form-control,.header-upper .cx_language-selector .form-control,.header-upper .cx_currency-selector .custom-select,.header-upper .cx_language-selector .custom-select,.header-upper .input-group .input-group-text{color:#BCC8D3}
-.cx_theme .custom-select{background:url(../images/keyboard_arrow_down.svg) no-repeat center right;background-size:21px}
+.cx_theme .custom-select{background:url(../images/keyboard_arrow_down.svg) no-repeat center right;background-size:16px}
+.cx_theme .bg-primary .custom-select{background:url(../images/keyboard_arrow_down-light.svg) no-repeat center right;background-size:16px}
 .cx_headline,.product-filter .filter-title,.title{padding-bottom:1rem;position:relative}
 .cx_headline{font-weight:800}
 h2.cx_headline{font-size:1.6rem}
