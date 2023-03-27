@@ -52,7 +52,7 @@
     var keywords = await NopHtml.GenerateMetaKeywordsAsync();
 }
 <!DOCTYPE html>
-<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" dir="@Html.GetUIDirection(!await Html.ShouldUseRtlThemeAsync())" class="@NopHtml.GeneratePageCssClasses()">
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" dir="@Html.GetUIDirection(!await Html.ShouldUseRtlThemeAsync())" class="@NopHtml.GeneratePageCssClasses() cx_theme">
 <head>
     <title>@title</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />

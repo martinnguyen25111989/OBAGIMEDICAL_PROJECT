@@ -14,9 +14,9 @@
         };
         AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
     </script>
-    <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu border-top border-bottom cx_main-menu">
+@*    <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu border-top border-bottom cx_main-menu">
         @await Component.InvokeAsync(typeof(TopMenuViewComponent))
-    </div>
+    </div>*@
     <div class="master-wrapper-content">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ContentBefore })
 

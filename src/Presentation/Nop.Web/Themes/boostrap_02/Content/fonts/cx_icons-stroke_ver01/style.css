@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'chuotxanh';
-  src:  url('fonts/chuotxanh.eot?hmw322');
-  src:  url('fonts/chuotxanh.eot?hmw322#iefix') format('embedded-opentype'),
-    url('fonts/chuotxanh.ttf?hmw322') format('truetype'),
-    url('fonts/chuotxanh.woff?hmw322') format('woff'),
-    url('fonts/chuotxanh.svg?hmw322#chuotxanh') format('svg');
+  src:  url('fonts/chuotxanh.eot?qbyzd6');
+  src:  url('fonts/chuotxanh.eot?qbyzd6#iefix') format('embedded-opentype'),
+    url('fonts/chuotxanh.ttf?qbyzd6') format('truetype'),
+    url('fonts/chuotxanh.woff?qbyzd6') format('woff'),
+    url('fonts/chuotxanh.svg?qbyzd6#chuotxanh') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -109,231 +109,234 @@
 .icon-countertops:before {
   content: "\e91b";
 }
-.icon-deck:before {
+.icon-currency_on:before {
   content: "\e91c";
 }
-.icon-dishwasher:before {
+.icon-deck:before {
   content: "\e91d";
 }
-.icon-done_all:before {
+.icon-dishwasher:before {
   content: "\e91e";
 }
-.icon-door_front:before {
+.icon-done_all:before {
   content: "\e91f";
 }
-.icon-door_open:before {
+.icon-door_front:before {
   content: "\e920";
 }
-.icon-drag_indicator:before {
+.icon-door_open:before {
   content: "\e921";
 }
-.icon-edit_document:before {
+.icon-drag_indicator:before {
   content: "\e922";
 }
-.icon-emoji_nature:before {
+.icon-edit_document:before {
   content: "\e923";
 }
-.icon-error:before {
+.icon-emoji_nature:before {
   content: "\e924";
 }
-.icon-facebook:before {
+.icon-error:before {
   content: "\e925";
 }
-.icon-favorite:before {
+.icon-facebook:before {
   content: "\e926";
 }
-.icon-first_page:before {
+.icon-favorite:before {
   content: "\e927";
 }
-.icon-garage_home:before {
+.icon-first_page:before {
   content: "\e928";
 }
-.icon-grid_view:before {
+.icon-garage_home:before {
   content: "\e929";
 }
-.icon-help:before {
+.icon-grid_view:before {
   content: "\e92a";
 }
-.icon-history:before {
+.icon-help:before {
   content: "\e92b";
 }
-.icon-home:before {
+.icon-history:before {
   content: "\e92c";
 }
-.icon-home_work:before {
+.icon-home:before {
   content: "\e92d";
 }
-.icon-image:before {
+.icon-home_work:before {
   content: "\e92e";
 }
-.icon-instagram:before {
+.icon-image:before {
   content: "\e92f";
 }
-.icon-keyboard_arrow_down:before {
+.icon-instagram:before {
   content: "\e930";
 }
-.icon-keyboard_arrow_left:before {
+.icon-keyboard_arrow_down:before {
   content: "\e931";
 }
-.icon-keyboard_arrow_right:before {
+.icon-keyboard_arrow_left:before {
   content: "\e932";
 }
-.icon-keyboard_arrow_up:before {
+.icon-keyboard_arrow_right:before {
   content: "\e933";
 }
-.icon-king_bed:before {
+.icon-keyboard_arrow_up:before {
   content: "\e934";
 }
-.icon-kitchen:before {
+.icon-king_bed:before {
   content: "\e935";
 }
-.icon-language:before {
+.icon-kitchen:before {
   content: "\e936";
 }
-.icon-last_page:before {
+.icon-language:before {
   content: "\e937";
 }
-.icon-laundry:before {
+.icon-last_page:before {
   content: "\e938";
 }
-.icon-linkedin:before {
+.icon-laundry:before {
   content: "\e939";
 }
-.icon-local_shipping:before {
+.icon-linkedin:before {
   content: "\e93a";
 }
-.icon-location:before {
+.icon-local_shipping:before {
   content: "\e93b";
 }
-.icon-location_away:before {
+.icon-location:before {
   content: "\e93c";
 }
-.icon-lock:before {
+.icon-location_away:before {
   content: "\e93d";
 }
-.icon-login:before {
+.icon-lock:before {
   content: "\e93e";
 }
-.icon-logout:before {
+.icon-login:before {
   content: "\e93f";
 }
-.icon-meeting_room:before {
+.icon-logout:before {
   content: "\e940";
 }
-.icon-menu_close:before {
+.icon-meeting_room:before {
   content: "\e941";
 }
-.icon-microwave:before {
+.icon-menu_close:before {
   content: "\e942";
 }
-.icon-new_releases:before {
+.icon-microwave:before {
   content: "\e943";
 }
-.icon-outdoor_grill:before {
+.icon-new_releases:before {
   content: "\e944";
 }
-.icon-person:before {
+.icon-outdoor_grill:before {
   content: "\e945";
 }
-.icon-phone:before {
+.icon-person:before {
   content: "\e946";
 }
-.icon-photo_camera:before {
+.icon-phone:before {
   content: "\e947";
 }
-.icon-photo_library:before {
+.icon-photo_camera:before {
   content: "\e948";
 }
-.icon-qr_code:before {
+.icon-photo_library:before {
   content: "\e949";
 }
-.icon-qr_code_scanner:before {
+.icon-qr_code:before {
   content: "\e94a";
 }
-.icon-real_estate_agent:before {
+.icon-qr_code_scanner:before {
   content: "\e94b";
 }
-.icon-redeem:before {
+.icon-real_estate_agent:before {
   content: "\e94c";
 }
-.icon-refresh:before {
+.icon-redeem:before {
   content: "\e94d";
 }
-.icon-replay:before {
+.icon-refresh:before {
   content: "\e94e";
 }
-.icon-restart_alt:before {
+.icon-replay:before {
   content: "\e94f";
 }
-.icon-roofing:before {
+.icon-restart_alt:before {
   content: "\e950";
 }
-.icon-rss_feed:before {
+.icon-roofing:before {
   content: "\e951";
 }
-.icon-search:before {
+.icon-rss_feed:before {
   content: "\e952";
 }
-.icon-send:before {
+.icon-search:before {
   content: "\e953";
 }
-.icon-shopping_bag:before {
+.icon-send:before {
   content: "\e954";
 }
-.icon-shower:before {
+.icon-shopping_bag:before {
   content: "\e955";
 }
-.icon-single_bed:before {
+.icon-shower:before {
   content: "\e956";
 }
-.icon-splitscreen:before {
+.icon-single_bed:before {
   content: "\e957";
 }
-.icon-star_rate:before {
+.icon-splitscreen:before {
   content: "\e958";
 }
-.icon-star_rate-fill:before {
+.icon-star_rate:before {
   content: "\e959";
 }
-.icon-star_rate-half:before {
+.icon-star_rate-fill:before {
   content: "\e95a";
 }
-.icon-support:before {
+.icon-star_rate-half:before {
   content: "\e95b";
 }
-.icon-support_agent:before {
+.icon-support:before {
   content: "\e95c";
 }
-.icon-sync:before {
+.icon-support_agent:before {
   content: "\e95d";
 }
-.icon-twitter:before {
+.icon-sync:before {
   content: "\e95e";
 }
-.icon-update:before {
+.icon-twitter:before {
   content: "\e95f";
 }
-.icon-videocam:before {
+.icon-update:before {
   content: "\e960";
 }
-.icon-villa:before {
+.icon-videocam:before {
   content: "\e961";
 }
-.icon-visibility:before {
+.icon-villa:before {
   content: "\e962";
 }
-.icon-visibility-off:before {
+.icon-visibility:before {
   content: "\e963";
 }
-.icon-warning:before {
+.icon-visibility-off:before {
   content: "\e964";
 }
-.icon-window:before {
+.icon-warning:before {
   content: "\e965";
 }
-.icon-youtube:before {
+.icon-window:before {
   content: "\e966";
 }
-.icon-zalo:before {
+.icon-youtube:before {
   content: "\e967";
+}
+.icon-zalo:before {
+  content: "\e968";
 }

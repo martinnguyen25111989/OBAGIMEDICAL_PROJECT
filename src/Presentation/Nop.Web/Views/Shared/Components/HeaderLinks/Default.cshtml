@@ -7,17 +7,27 @@
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderLinksBefore, additionalData = Model })
         @if (Model.IsAuthenticated)
         {
-            <li>
+            <li class="navbar-tool btn-group">
                             
-                <a href="@Url.RouteUrl("CustomerInfo")" class="navbar-tool btn btn-light bg-transparent d-none d-lg-flex py-2 mr-sm-1">
+                <a href="@Url.RouteUrl("CustomerInfo")" class="btn btn-light bg-transparent d-none d-lg-flex py-2">
                 <div class="navbar-tool-icon-box">
                     <i class="navbar-tool-icon icon-person"></i>
                 </div>
                 <div class="navbar-tool-text text-left"><small>Hello!</small>@T("Account.MyAccount")</div>
                     @*@Model.CustomerName*@
                 </a>
+                <button type="button" class="btn btn-light bg-transparent dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="@Url.RouteUrl("Logout")">@T("Account.Logout")</a>
+                    @*<a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>*@
+                </div>
+
             </li>
-            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout navbar-tool btn btn-light bg-transparent d-none d-lg-flex mr-lg-2 py-2">@T("Account.Logout")</a></li>
         }
         else
         {
@@ -27,9 +37,9 @@
 
             @if (Model.RegistrationType != UserRegistrationType.Disabled)
             {
-                <li><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register">@T("Account.Register")</a></li>
+                @*<li class="navbar-tool"><a href="@Url.RouteUrl("Register", new { returnUrl })" class="ico-register btn btn-light d-none d-lg-flex mr-lg-2">@T("Account.Register")</a></li>*@
             }
-            <li><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login">@T("Account.Login")</a></li>
+            <li class="navbar-tool"><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login navbar-tool-icon-box btn btn-light bg-transparent py-2" title="@T("Account.Login")"><i class="icon-person"></i></a></li>
         }
         @if (Model.AllowPrivateMessages)
         {
@@ -42,7 +52,7 @@
         }
         @if (Model.WishlistEnabled)
         {
-            <li class="navbar-tool">
+            <li class="navbar-tool ml-2">
                 <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist navbar-tool-icon-box btn btn-light bg-transparent py-2">
                    @*<span class="wishlist-label">@T("Wishlist")</span>*@
                     <span class="navbar-tool-icon icon-favorite"></span>

@@ -61,10 +61,11 @@
                             .append("<a>@(Model.ShowProductImagesInSearchAutoComplete ? Html.Raw("<img src='\" + item.productpictureurl + \"'>") : null)<span>" + t + "</span></a>")
                             .appendTo(ul);
                     };
-
-                    $('.close-search-box-button').on('click', function () {
-                        $(this).collapse('hide');
+                    $("#collapseSearch .close-search-box-button").on('click', function (e) {
+                        $(this).find('#collapseSearch').removeClass("show");
                     });
+
+ 
 
                 });
             </script>
