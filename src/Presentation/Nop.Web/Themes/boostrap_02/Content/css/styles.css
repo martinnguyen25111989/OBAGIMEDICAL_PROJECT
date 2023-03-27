@@ -264,7 +264,7 @@ img{max-width:100%;height:auto;vertical-align:middle}
 .cx_header-links-wrapper .cx_social-label{padding:0 10px}
 .cx_devide{position:relative;display:flex;align-items:center}
 .cx_devide:before{content:"|"}
-.cx_currency-selector,.cx_language-selector{padding:0 5px}
+.cx_currency-selector{margin-right:10px}
 .cx_currency-selector .form-control,.cx_language-selector .form-control,.cx_currency-selector .custom-select,.cx_language-selector .custom-select,.header-upper .input-group .input-group-text{background-color:rgba(255,255,255,0);border-color:rgba(255,255,255,0.3);font-size:.8em}
 .header-upper .cx_currency-selector .form-control,.header-upper .cx_language-selector .form-control,.header-upper .cx_currency-selector .custom-select,.header-upper .cx_language-selector .custom-select,.header-upper .input-group .input-group-text{color:#BCC8D3}
 .cx_theme .custom-select{background:url(../images/keyboard_arrow_down.svg) no-repeat center right;background-size:16px}

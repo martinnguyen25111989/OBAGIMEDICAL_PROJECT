@@ -10,19 +10,21 @@
                 <div class="swiper-wrapper">
                 @foreach (var item in Model)
                 {
-                        <div class="item-box swiper-slide">
-                        <div class="category-item">
-                            <h2 class="title">
-                                <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
-                                    @item.Name
-                                </a>
-                            </h2>
-                            <div class="picture">
-                                <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
-                                    <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
-                                </a>
-                            </div>
-                        </div>
+                    <div class="item-box swiper-slide">
+                            <figure class="category-item">
+                                <div class="picture">
+                                    <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                        <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <h2 class="title">
+                                        <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                            @item.Name
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                        </figure>
                     </div>
                 }
                 </div>
