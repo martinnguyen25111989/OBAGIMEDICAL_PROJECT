@@ -9,7 +9,7 @@
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',
                 stamp: '.stamp',
-                gutter: 10,
+                gutter: 15,
                 percentPosition: true
             });
         });
@@ -18,19 +18,22 @@
     <div class="product-grid home-page-product-grid cx_home-page-product-grid">
         <div class="item-grid row pt-4 mx-n2 pb-5 cx_grid-msr">
             <div class="grid-sizer"></div>
-            <div class="stamp cx_gird-featured-box px-0 mb-4">
-                <figure class="cx_gird-featured-box-item">
-                     <div class="picture"></div>
+            <div class="stamp cx_gird-featured-box px-0">
+                <figure class="cx_gird-featured-box-item effect-hover effect-sadie">
+                     <div class="picture">
+                            <img src="../Themes/boostrap_02/Content/images/bg_fresh.jpg" />
+                     </div>
                     <figurecaption>
                         <h2 class="cx_headline">@T("Homepage.Products")</h2>
-                        <a href="#" class="btn-link text-dark">View All</a>
+                        <p class="cx_dsc-small">Được nhập khẩu trực tiếp từ các thương hiệu uy tín</p>
+                        <a href="#" class="btn btn-outline-light">XEM TẤT CẢ</a>
                     </figurecaption>
                 </figure>
             </div>       
             @foreach (var item in Model)
             {
                 
-                <div class="px-0 mb-4 grid-item">
+                <div class="px-0 mb-3 grid-item">
                     @await Html.PartialAsync("_ProductBox", item)
                 </div>
             }
