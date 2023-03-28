@@ -9,6 +9,7 @@
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',
                 stamp: '.stamp',
+                gutter: 10,
                 percentPosition: true
             });
         });
@@ -18,10 +19,13 @@
         <div class="item-grid row pt-4 mx-n2 pb-5 cx_grid-msr">
             <div class="grid-sizer"></div>
             <div class="stamp cx_gird-featured-box px-0 mb-4">
-                <figurecaption>
-                    <h2 class="cx_headline">@T("Homepage.Products")</h2>
-                    <a href="#" class="btn-link text-dark">View All</a>
-                </figurecaption>
+                <figure class="cx_gird-featured-box-item">
+                     <div class="picture"></div>
+                    <figurecaption>
+                        <h2 class="cx_headline">@T("Homepage.Products")</h2>
+                        <a href="#" class="btn-link text-dark">View All</a>
+                    </figurecaption>
+                </figure>
             </div>       
             @foreach (var item in Model)
             {
