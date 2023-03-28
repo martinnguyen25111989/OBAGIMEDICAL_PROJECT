@@ -6,7 +6,13 @@
 {
     <div class="container">
         <div class="category-grid home-page-category-grid cx_home-page-category-grid">
-            <div id="swiper-category" class="item-grid">
+            <div class="row my-5">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="cx_headline">Xem theo danh mục</h2>
+                    <p class="cx_dsc">Khỏe hơn với các thương hiệu uy tín của OBAGI</p>
+                </div>
+            </div>
+            <div id="swiper-category" class="item-grid swiper">
                 <div class="swiper-wrapper">
                 @foreach (var item in Model)
                 {
