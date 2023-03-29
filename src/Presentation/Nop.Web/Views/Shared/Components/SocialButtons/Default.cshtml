@@ -1,23 +1,23 @@
 ﻿@model SocialModel
-<ul class="networks">
+<ul class="networks cx_networks list-inline">
 	@if (!string.IsNullOrEmpty(Model.FacebookLink))
 	{
-		<li class="facebook"><a href="@Model.FacebookLink" target="_blank" rel="noopener noreferrer">@T("Footer.FollowUs.Facebook")</a></li>
+        <li class="facebook list-inline-item"><a href="@Model.FacebookLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-circle" title="@T("Footer.FollowUs.Facebook")"><i class="icon-facebook"></i></a></li>
 	}
 	@if (!string.IsNullOrEmpty(Model.TwitterLink))
 	{
-		<li class="twitter"><a href="@Model.TwitterLink" target="_blank" rel="noopener noreferrer">@T("Footer.FollowUs.Twitter")</a></li>
+        <li class="twitter list-inline-item"><a href="@Model.TwitterLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-circle" title="@T("Footer.FollowUs.Twitter")"><i class="icon-twitter"></i></a></li>
 	}
 	@if (Model.NewsEnabled)
 	{
-		<li class="rss"><a href="@Url.RouteUrl("NewsRSS", new {languageId = Model.WorkingLanguageId})">@T("Footer.FollowUs.RSS")</a></li>
+        <li class="rss list-inline-item"><a href="@Url.RouteUrl("NewsRSS", new {languageId = Model.WorkingLanguageId})" class="btn btn-primary btn-circle" title="@T("Footer.FollowUs.RSS")"><i class="icon-rss_feed"></i></a></li>
 	}
 	@if (!string.IsNullOrEmpty(Model.YoutubeLink))
 	{
-		<li class="youtube"><a href="@Model.YoutubeLink" target="_blank" rel="noopener noreferrer">@T("Footer.FollowUs.Youtube")</a></li>
+        <li class="youtube list-inline-item"><a href="@Model.YoutubeLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-circle" title="@T("Footer.FollowUs.Youtube")"><i class="icon-youtube"></i></a></li>
 	}
 	@if (!string.IsNullOrEmpty(Model.InstagramLink))
 	{
-		<li class="instagram"><a href="@Model.InstagramLink" target="_blank" rel="noopener noreferrer">@T("Footer.FollowUs.Instagram")</a></li>
+        <li class="instagram list-inline-item"><a href="@Model.InstagramLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-circle" title="@T("Footer.FollowUs.Instagram")"><i class="icon-instagram"></i></a></li>
 	}
 </ul>

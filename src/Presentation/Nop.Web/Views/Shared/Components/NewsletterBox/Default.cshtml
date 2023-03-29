@@ -3,11 +3,11 @@
     <div class="title">
         <strong>@T("Newsletter.Title")</strong>
     </div>
-    <div class="newsletter-subscribe" id="newsletter-subscribe-block">
-        <div class="newsletter-email">
-            <input asp-for="NewsletterEmail" id="newsletter-email" class="newsletter-subscribe-text" placeholder=@T("Newsletter.Email.Placeholder") aria-label="@T("Newsletter.Subscribe")" />
+    <div class="newsletter-subscribe cx_newsletter-subscribe" id="newsletter-subscribe-block">
+        <div class="newsletter-email input-group">
+            <input asp-for="NewsletterEmail" id="newsletter-email" class="newsletter-subscribe-text form-control" placeholder=@T("Newsletter.Email.Placeholder") aria-label="@T("Newsletter.Subscribe")" />
 
-            <button type="button" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button">@T(Model.AllowToUnsubscribe ? "Newsletter.Options.Send" : "Newsletter.Options.Subscribe")</button>
+            <button type="button" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button btn btn-outline-secondary" title="@T(Model.AllowToUnsubscribe ? "Newsletter.Options.Send" : "Newsletter.Options.Subscribe")"><i class="icon-send"></i></button>
 
             @if (Model.AllowToUnsubscribe)
             {
