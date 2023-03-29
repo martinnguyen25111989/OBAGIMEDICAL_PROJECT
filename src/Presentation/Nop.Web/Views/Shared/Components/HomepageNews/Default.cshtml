@@ -4,30 +4,88 @@
 
 @if (Model.NewsItems.Count > 0)
 {
-    <div class="news-list-homepage">
-        <div class="title">
-            <strong>@T("News")</strong>
-        </div>
-        <div class="news-items">
-            @foreach (var item in Model.NewsItems)
-            {
-                <div class="news-item">
-                    <div class="news-head">
-                        <a class="news-title" href="@(Url.RouteUrl<NewsItem>(new { SeName = item.SeName }))">@item.Title</a>
-                        <span class="news-date">-@item.CreatedOn.ToString("D")</span>
-                    </div>
-                    <div class="news-body">
-                        @Html.Raw(item.Short)
-                    </div>
-                    <div class="buttons">
-                        <a href="@(Url.RouteUrl<NewsItem>(new { SeName = item.SeName }))" class="read-more">@T("News.MoreInfo")</a>
+    <div class="container">
+        <div class="news-list-homepage cx_news-list-homepage">
+            <div class="row my-5">
+                <div class="col-md-8 offset-md-2">
+                    <div class="title text-center">
+                        <h2 class="cx_headline">@T("News")</h2>
+                        <p class="cx_dsc">
+                            Bí quyết giữ làn da khỏe mạnh             
+                            <span class="view-all">
+                                <a href="@Url.RouteUrl("NewsArchive")">@T("News.ViewAll")</a>
+                            </span>
+                        </p>
                     </div>
                 </div>
-            }
-        </div>
-        <div class="view-all">
-            <a href="@Url.RouteUrl("NewsArchive")">@T("News.ViewAll")</a>
+            </div>
+
+            <div id="swiper-news" class="news-items row py-5 gutter-3">
+                <div class="swiper-wrapper">
+                @foreach (var item in Model.NewsItems)
+                {
+                    <div class="news-item col-md-6 col-lg-4 swiper-slide">
+                        <div class="news-thumbnail cx_news-thumbnail">
+                            <picture>
+                                <source srcset="..." type="image/svg+xml">
+                                <img src="..." class="img-fluid img-thumbnail rounded" alt="...">
+                            </picture>
+                        </div>
+                        <div class="news-head cx_news-head">
+                            <a class="news-title cx_news-title" href="@(Url.RouteUrl<NewsItem>(new { SeName = item.SeName }))">@item.Title</a>
+                            <span class="news-date cx_news-date">-@item.CreatedOn.ToString("D")</span>
+                        </div>
+                        <div class="news-body cx_news-body">
+                            @Html.Raw(item.Short)
+                        </div>
+                        <div class="buttons cx_news-buttons">
+                            <a href="@(Url.RouteUrl<NewsItem>(new { SeName = item.SeName }))" class="read-more">@T("News.MoreInfo")</a>
+                        </div>
+                    </div>
+                }
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script asp-location="Footer" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script asp-location="Footer">
+        new Swiper('#swiper-news', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                clickable: true,
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                "@@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                "@@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                "@@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                "@@1.50": {
+                    slidesPerView: 6,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
 
 }
