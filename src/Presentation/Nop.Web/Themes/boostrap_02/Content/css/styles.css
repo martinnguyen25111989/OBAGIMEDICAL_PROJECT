@@ -355,6 +355,7 @@ h2.cx_headline{font-size:1.6rem;}
 .cx_product-title{font-family: 'Open Sans', sans-serif !important;font-weight:700;margin-top:1em;font-size: 14px;}
 .cx_product-title a{transition:color .25s ease-in-out;color:var(--dark);text-decoration:none!important}
 .cx_product-card .price.actual-price{ color:var(--primary) !important; font-weight:700; font-size:14px}
+.price-value-4{color:var(--primary) !important;}
 .cx_product-card.card{padding:.5rem .5rem 1.25rem;border-color:#D9E3F0;transition:all .15s ease-in-out}
 .cx_product-card .card-body{position:relative;background-color:#fff;z-index:2;padding:1.25rem 0}
 .cx_product-card .card-body-hidden{position:absolute;left:0;top:0;width:100%;transition:all .15s ease-in-out;opacity:0;visibility:hidden;z-index:1;text-align: right;padding: 1em;}

@@ -12,6 +12,6 @@
         addToWishlistText = T("Products.Wishlist.AddToWishlist").Text;
     }
     <div class="add-to-wishlist">
-        <button type="button" id="add-to-wishlist-button-@Model.ProductId" class="button-2 add-to-wishlist-button btn btn-light" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new {productId = Model.ProductId, shoppingCartTypeId = (int) ShoppingCartType.Wishlist})', '#product-details-form');return false;" title="@addToWishlistText"><i class="icon-favorite"></i></button>
+            <button type="button" id="add-to-wishlist-button-@Model.ProductId" class="button-2 add-to-wishlist-button btn btn-light" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new {productId = Model.ProductId, shoppingCartTypeId = (int) ShoppingCartType.Wishlist})', '#product-details-form');return false;" title="@addToWishlistText"><i class="icon-favorite"></i></button>
     </div>
 }
