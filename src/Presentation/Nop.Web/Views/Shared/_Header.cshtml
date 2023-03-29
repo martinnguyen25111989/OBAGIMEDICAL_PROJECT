@@ -1,4 +1,4 @@
-﻿<div class="header navbar-sticky bg-light">
+﻿<div class="header bg-light">
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderBefore })
     <div class="header-upper navbar navbar-expand-lg navbar-dark bg-primary d-none d-md-flex">
         <div class="container-fluid">
@@ -34,3 +34,4 @@
     </div>
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeaderAfter })
 </div>
+
