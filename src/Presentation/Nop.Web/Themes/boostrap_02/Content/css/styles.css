@@ -490,9 +490,6 @@ h2.cx_headline{font-size:1.6rem;}
 .eu-cookie-bar-notification button:hover,.eu-cookie-bar-notification button:focus{background-color:#248ece}
 .eu-cookie-bar-notification a{display:block;color:#4ab2f1}
 .eu-cookie-bar-notification a:hover,.eu-cookie-bar-notification a:focus{text-decoration:underline}
-.breadcrumb{padding:.75rem 0!important;margin-bottom:0!important}
-.breadcrumb-item{font-size:.8em}
-.breadcrumb-item a{color:#000;display:flex}
 .cx_product-selectors{font-size:.8em}
 .cx_product-sorting,.cx_product-page-size{display:flex}
 .cx_product-sorting span,.cx_product-page-size span{padding:0 5px;flex-shrink:0;padding-top:6px}
@@ -706,4 +703,10 @@ to{transform:scale(1)}
 .footer-block .title{background:url(../Themes/DefaultClean/Content/images/toggle-white.png) right center no-repeat;cursor:pointer}
 .footer-block .list{display:none;margin:0 0 20px}
 .footer-block .list a{display:block;padding:10px 15px;line-height:20px}
-
+/***/
+.breadcrumb{margin:0 0 50px;background-color:#F3F8FF !important;padding:5px 30px !important}
+.breadcrumb ul{font-size:0; margin-bottom: 0;}
+.breadcrumb li{display:inline-block}
+.breadcrumb li *{display:inline-block;margin:0 5px;font-size:12px}
+.breadcrumb strong{font-weight:400}
+.breadcrumb a:hover,.breadcrumb a:focus{color:#4ab2f1}
