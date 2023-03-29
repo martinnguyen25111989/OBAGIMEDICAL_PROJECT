@@ -57,7 +57,7 @@
 }
 @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsAfterBreadcrumb, additionalData = Model })
 <div class="page product-details-page">
-    <div class="page-body">
+    <div class="page-body container">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsTop, additionalData = Model })
         <form asp-route="Product" asp-route-sename="@Model.SeName" method="post" id="product-details-form">
             @if (seoSettings.MicrodataEnabled)
@@ -65,15 +65,15 @@
                 @await Html.PartialAsync("_Microdata", Model)
             }
             <div data-productid="@Model.Id">
-                <div class="product-essential">
+                <div class="product-essential row">
                     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.ProductDetailsEssentialTop, additionalData = Model })
-                    <div class="gallery">
+                    <div class="gallery col-lg-6">
                         <!--product pictures-->
                         @await Html.PartialAsync("_ProductDetailsPictures", Model)
                         <!--product videos-->
                         @await Html.PartialAsync("_ProductDetailsVideos", Model)
                     </div>
-                    <div class="overview">
+                    <div class="overview col-lg-5">
                         @await Html.PartialAsync("_Discontinued", Model)
                         <div class="product-name">
                             <h1>
@@ -150,7 +150,7 @@
                     </div>
                     @if (!string.IsNullOrEmpty(Model.FullDescription))
                     {
-                        <div class="full-description">
+                        <div class="full-description col-12">
                             @Html.Raw(Model.FullDescription)
                         </div>
                     }
