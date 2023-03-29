@@ -24,7 +24,7 @@
     </div>
     @if (Model.PictureModels.Count > 1 && Model.DefaultPictureZoomEnabled)
     {
-        <div class="picture-thumbs">
+        <div class="picture-thumbs d-flex">
             @foreach (var picture in Model.PictureModels)
             {
                 <a class="thumb-item" href="@picture.FullSizeImageUrl" alt="@picture.AlternateText" title="@picture.Title">
@@ -69,7 +69,7 @@
     {
         if (Model.PictureModels.Count > 1)
         {
-            <div class="picture-thumbs">
+            <div class="picture-thumbs d-flex">
                 @foreach (var picture in Model.PictureModels)
                 {
                     <div class="thumb-item">
