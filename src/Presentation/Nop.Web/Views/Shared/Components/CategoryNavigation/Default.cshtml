@@ -33,7 +33,7 @@
         }
 
         <li class="@liClass">
-            <a href="@(Url.RouteUrl<Category>(new { SeName = lineModel.Category.SeName }))">@lineModel.Category.Name
+            <a href="@(Url.RouteUrl<Category>(new { SeName = lineModel.Category.SeName }))" class="nav-link">@lineModel.Category.Name
                 @if (lineModel.Category.NumberOfProducts.HasValue)
                 {
                     <text> </text>@T("Categories.TotalProducts", lineModel.Category.NumberOfProducts.Value)
@@ -69,8 +69,8 @@
         <div class="title">
             <strong>@T("Categories")</strong>
         </div>
-        <div class="listbox">
-            <ul class="list">
+        <div class="listbox cx_cate-list">
+            <ul class="list cx_cate-list-in">
                 @foreach (var category in Model.Categories)
                 {
                     var categoryLineModel = new CategoryNavigationModel.CategoryLineModel

@@ -529,8 +529,7 @@ h2.cx_headline{font-size:1.6rem;}
 .btn-light.viewmode-icon{background-color:transparent;border-color:transparent;color:rgba(0,0,0,0.2)}
 .cx_cate-list .cx_cate-list-in > li.inactive{display:none}
 .cx_cate-list-in a,.cx_manu-list-in > li a{color:#000;text-decoration:none}
-.cx_cate-list-in > li > a,.block [class*="title"]{font-weight:600;font-size:1.1em;padding:.5rem 0;position:relative;margin-bottom:1em;font-family:'Roboto Slab',serif}
-.cx_cate-list-in > li > a::before,.block [class*="title"]:before{width:25px;height:3px;content:"";background-color:var(--danger);position:absolute;bottom:0;left:0}
+.cx_cate-list-in > li > a,.block [class*="title"]{font-size:1em;padding:.5rem 0;position:relative;margin-bottom:1em;font-family: 'Raleway',sans-serif;}
 .cx_cate-list-in > li .sublist .active.last .nav-link,.cx_manu-list-in > li.active > a{background-color:rgba(221,33,20,.1);border-radius:40px;font-weight:600}
 .cx_cate-list-in > li .sublist > li .nav-link{display:flex;align-items:center;padding:.5rem}
 .cx_cate-list-in > li .sublist > li,.cx_manu-list-in > li{margin-bottom:.5em}
