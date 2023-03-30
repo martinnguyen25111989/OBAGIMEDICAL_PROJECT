@@ -1,17 +1,67 @@
 ﻿@model IList<ProductOverviewModel>
 @if (Model.Count > 0)
 {
-    <div class="product-grid bestsellers">
-        <div class="title">
-            <strong>@T("Bestsellers")</strong>
-        </div>
-        <div class="item-grid">
-            @foreach (var item in Model)
-            {
-                <div class="item-box">
-                    @await Html.PartialAsync("_ProductBox", item)
+    <div class="container">
+        <div class="product-grid bestsellers cx_home-page-bestsellers-grid">
+            <div class="row my-5">
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="title cx_headline">
+                        @T("Bestsellers")
+                    </h2>
+                    <p class="cx_dsc">Tiêu dùng đúng sản phẩm</p>
                 </div>
-            }
+            </div>
+
+            <div id="swiper-bestsellers" class="item-grid">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item-box swiper-slide">
+                            @await Html.PartialAsync("_ProductBox", item)
+                        </div>
+                    }
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- Swiper JS -->
+        <script asp-location="Footer" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script asp-location="Footer">
+        new Swiper('#swiper-bestsellers', {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            cssMode: true,
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                            pagination: {
+                                clickable: true,
+                                el: '.swiper-pagination',
+                            },
+                            breakpoints: {
+                                "@@0.00": {
+                                slidesPerView: 1,
+                                spaceBetween: 10,
+                                },
+                                "@@0.75": {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                                },
+                                "@@1.00": {
+                                slidesPerView: 3,
+                                spaceBetween: 40,
+                                },
+                                "@@1.50": {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                                },
+                            },
+        });
+        </script>
 }
