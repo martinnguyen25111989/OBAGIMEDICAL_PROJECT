@@ -8,21 +8,21 @@
         <div class="title">
             <strong>@T("Products.Tags.Popular")</strong>
         </div>
-        <div class="listbox">
-            <div class="tags">
-                <ul>
-                    @foreach (var item in Model.Tags)
-                    {
-                        <li><a href="@(Url.RouteUrl<ProductTag>(new { SeName = item.SeName }))" style="font-size:@(Model.GetFontSize(item))%;">@item.Name</a></li>
-                    }
-                </ul>
-            </div>
+        <div class="listbox cx_tags">
+            <ul class="cx_tags-in">
+                @foreach (var item in Model.Tags)
+                {
+                    <li><a href="@(Url.RouteUrl<ProductTag>(new { SeName = item.SeName }))" style="font-size:@(Model.GetFontSize(item))%;">@item.Name</a></li>
+                }
+            </ul>
             @if (Model.TotalTags > Model.Tags.Count)
             {
-                <div class="view-all">
-                    <a href="@Url.RouteUrl("ProductTagsAll")">@T("Products.Tags.Popular.ViewAll")</a>
-                </div>
+               <div class="view-all">
+                   <a href="@Url.RouteUrl("ProductTagsAll")">@T("Products.Tags.Popular.ViewAll")</a>
+               </div>
             }
         </div>
+
+
     </div>
 }

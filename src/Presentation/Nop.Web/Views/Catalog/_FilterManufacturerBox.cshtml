@@ -8,9 +8,9 @@
         <ul class="group product-manufacturer-group">
             @foreach (var manufacturer in Model.Manufacturers)
             {
-                <li class="item">
-                    <input id="attribute-manufacturer-@manufacturer.Value" type="checkbox" data-manufacturer-id="@manufacturer.Value" checked="@manufacturer.Selected" />
-                    <label for="attribute-manufacturer-@manufacturer.Value">
+                <li class="item custom-control custom-checkbox">
+                    <input id="attribute-manufacturer-@manufacturer.Value" type="checkbox" data-manufacturer-id="@manufacturer.Value" checked="@manufacturer.Selected" class="custom-control-input" />
+                    <label for="attribute-manufacturer-@manufacturer.Value" class="custom-control-label">
                         @manufacturer.Text
                     </label>
                 </li>

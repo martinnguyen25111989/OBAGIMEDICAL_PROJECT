@@ -8,8 +8,8 @@
         <div class="title">
             <strong>@T("Manufacturers")</strong>
         </div>
-        <div class="listbox">
-            <ul class="list">
+        <div class="listbox cx_checkbox-list">
+            <ul class="list cx_checkbox-list-in">
                 @foreach (var manufacturer in Model.Manufacturers)
                 {
                     <li class="@(manufacturer.IsActive ? "active" : "inactive")">

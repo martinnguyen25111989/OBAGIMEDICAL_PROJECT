@@ -13,11 +13,11 @@
                 </li>
                 @foreach (var value in attr.Values)
                 {
-                    <li class="item @(!string.IsNullOrEmpty(value.ColorSquaresRgb) ? "color-item" : null)">
-                        <input id="attribute-option-@value.Id" type="checkbox" data-option-id="@value.Id" checked="@value.Selected" />
+                    <li class="item @(!string.IsNullOrEmpty(value.ColorSquaresRgb) ? "color-item" : null) custom-control custom-checkbox">
+                        <input id="attribute-option-@value.Id" type="checkbox" data-option-id="@value.Id" checked="@value.Selected" class="custom-control-input" />
                         @if (string.IsNullOrEmpty(value.ColorSquaresRgb))
                         {
-                            <label for="attribute-option-@value.Id">
+                            <label for="attribute-option-@value.Id" class="custom-control-label">
                                 @value.Name
                             </label>
                         }
