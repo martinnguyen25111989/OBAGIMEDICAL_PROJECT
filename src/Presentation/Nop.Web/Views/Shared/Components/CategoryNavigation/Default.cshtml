@@ -33,12 +33,13 @@
         }
 
         <li class="@liClass">
-            <a href="@(Url.RouteUrl<Category>(new { SeName = lineModel.Category.SeName }))" class="nav-link">@lineModel.Category.Name
+            <a href="@(Url.RouteUrl<Category>(new { SeName = lineModel.Category.SeName }))" class="nav-link">@lineModel.Category.Name  <span class="sublist-toggle-navigation"></span>
                 @if (lineModel.Category.NumberOfProducts.HasValue)
                 {
                     <text> </text>@T("Categories.TotalProducts", lineModel.Category.NumberOfProducts.Value)
                 }
             </a>
+           
             @{
                 if (lineModel.Category.Id == lineModel.CurrentCategoryId ||
                     lineModel.Category.SubCategories.Count(BreadCrumbContainsCurrentCategoryId) > 0)
@@ -84,3 +85,11 @@
         </div>
     </div>
 }
+
+<script asp-asp-location="footer">
+    $('.cx_cate-list-in .sublist').hide();
+    $('.cx_cate-list-in  li .sublist-toggle-navigation').click(function () {
+        $(this).siblings('.cx_cate-list-in li .sublist-toggle-navigation').find('ul').slideUp();
+        $(this).find('ul').slideToggle();
+    });
+</script>

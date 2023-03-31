@@ -544,6 +544,10 @@ h2.cx_headline{font-size:1.6rem;}
 .cx_cate-list-in > li .sublist > li .nav-link{display:flex;align-items:center;padding:.5rem}
 .cx_cate-list-in > li .sublist > li,.cx_checkbox-list-in > li{margin-bottom:.5em}
 .cx_cate-list-in > li > a, .cx_cate-list-in > li .sublist > li .nav-link,.cx_checkbox-list-in > li a{font-size:.9em;color:var(--gray-dark)}
+.cx_cate-list-in > li{}
+.cx_cate-list-in > li > a{align-items: center;display: flex;justify-content: space-between;padding: .5rem 0;position:relative}
+.cx_cate-list-in > li a .sublist-toggle-navigation{display: inline-block;font-family: 'chuotxanh' !important; position:absolute; right:0; width:24px; height:24px; text-align:center; cursor:pointer}
+.cx_cate-list-in > li a .sublist-toggle-navigation:before {content: "\e933";}
 .cx_cate-list-in > li .sublist > li.active a:before{color:var(--danger)}
 .cx_cate-list-in > li .sublist > li a[href="/bathroom"]:before,.cx_cate-list-in > li .sublist > li a[href="/bedroom"]:before,.cx_cate-list-in > li .sublist > li a[href="/bed"]:before,.cx_cate-list-in > li .sublist > li a[href="/dining-room"]:before,.cx_cate-list-in > li .sublist > li a[href="/living-room"]:before,.cx_cate-list-in > li .sublist > li a[href="/kitchen"]:before,.cx_cate-list-in > li .sublist > li a[href="/home-office"]:before,.cx_cate-list-in > li .sublist > li a[href="/chair"]:before,.cx_cate-list-in > li .sublist > li a[href="/mattress"]:before,.cx_cate-list-in > li .sublist > li a[href="/car-seat"]:before,.cx_cate-list-in > li .sublist > li a[href="/custom-reupholstery"]:before{font-family:'annasdrapery'!important;margin-right:5px;font-weight:400;font-size:24px;line-height:1}
 .cx_cate-list-in > li .sublist > li a[href="/bathroom"]:before{content:"\e900"}
