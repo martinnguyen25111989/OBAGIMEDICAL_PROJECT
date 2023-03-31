@@ -560,12 +560,19 @@ h2.cx_headline{font-size:1.6rem;}
 .cx_cate-list-in > li .sublist > li a[href="/mattress"]:before{content:"\e928"}
 .cx_cate-list-in > li .sublist > li a[href="/car-seat"]:before{content:"\e92c"}
 .cx_cate-list-in > li .sublist > li a[href="/custom-reupholstery"]:before{content:"\e92d"}
+/** product list view mode */
 .product-list > .row{flex-direction:column}
 .product-list > .row [class*="col-"]{max-width:100%!important}
-.product-list > .row [class*="col-"] .card.cx_product-card{flex-direction:row}
+.product-list > .row [class*="col-"] .card.cx_product-card{flex-direction:row;position: relative;}
 .product-list > .row [class*="col-"] .card.cx_product-card.product-item .card-img-top{width:199px}
-.product-list > .row [class*="col-"] .card.cx_product-card .card-body-hidden{width:auto;right:0;left:auto;margin-top:-150px}
-.cx_slider-catalogs .flickity-viewport{height:400px!important}
+.product-list > .row [class*="col-"] .card.cx_product-card .card-body-hidden{width:auto;right:0;left:auto;margin-top:20px; opacity:1 }
+.product-list > .row [class*="col-"] .card.cx_product-card .picture{width:200px;margin-right: 15px;position: relative;}
+.product-list > .row [class*="col-"] .card.cx_product-card .picture img{object-fit:contain}
+.product-list > .row [class*="col-"] .card.cx_product-card .btn-addToCart, .product-list > .row [class*="col-"] .card.cx_product-card .card-body-hidden{position:static}
+/****/
+.cx_slider-catalogs .flickity-viewport {
+  height: 400px !important
+}
 .filter-content .group .name{font-size:.76em;color:var(--gray);font-weight: lighter !important;}
 .selected-price-range{display:flex;justify-content:space-between;font-size:.8em;margin-bottom:5px}
 .ui-slider .ui-slider-handle{border-radius:40px}
