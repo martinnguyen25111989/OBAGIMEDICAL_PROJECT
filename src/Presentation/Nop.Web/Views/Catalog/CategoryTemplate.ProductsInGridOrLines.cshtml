@@ -89,19 +89,21 @@
         @*subcategories*@
         @if (Model.SubCategories.Count > 0)
         {
-            <div class="category-grid sub-category-grid">
-                <div class="item-grid">
+            <div id="swiper-subcategory" class="category-grid sub-category-grid cx_sub-category-grid mt-4 mb-4">
+                <div class="item-grid swiper-wrapper">
                     @foreach (var item in Model.SubCategories)
                     {
-                        <div class="item-box">
-                            <div class="sub-category-item">
-                                <h2 class="title">
-                                    <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
-                                        @item.Name
-                                    </a>
-                                </h2>
+                        <div class="item-box cx_item-box cx_equal col-4 col-sm-2 mx-2 px-0 swiper-slide">
+                            <div class="sub-category-item cx_sub-category-item">
+                                <div class="card-footer">
+                                    <h2 class="title">
+                                        <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                            @item.Name
+                                        </a>
+                                    </h2>
+                                </div>
                                 <div class="picture">
-                                    <a href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
+                                    <a class="cx_img" href="@(Url.RouteUrl<Category>(new { SeName = item.SeName }))" title="@item.PictureModel.Title">
                                         <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
                                     </a>
                                 </div>
@@ -109,7 +111,49 @@
                         </div>
                     }
                 </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
             </div>
+
+                <!-- Link Swiper's CSS -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+                <!-- Swiper JS -->
+                <script asp-location="Footer" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                <script asp-location="Footer">
+                        new Swiper('#swiper-subcategory', {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        cssMode: true,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        pagination: {
+                            clickable: true,
+                            el: '.swiper-pagination',
+                        },
+                        breakpoints: {
+                            "@@0.00": {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            },
+                            "@@0.75": {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                            },
+                            "@@1.00": {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                            },
+                            "@@1.50": {
+                            slidesPerView: 6,
+                            spaceBetween: 50,
+                            },
+                        },
+                    });
+                </script>
+
         }
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.CategoryDetailsBeforeFeaturedProducts, additionalData = Model })
         @*featured products*@

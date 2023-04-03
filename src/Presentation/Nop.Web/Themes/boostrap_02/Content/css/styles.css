@@ -191,6 +191,7 @@ ol,ul{list-style:none}
 a img{border:none}
 .w-105{width:105px!important}
 .mw-150{min-width:150px}
+.no-radius-tb-l{border-top-left-radius: 0;border-bottom-left-radius: 0;}
 .navbar-brand{max-width:90px}
 .navbar .cx_lan-label{display:none}
 .btn-group-lg > .btn,.btn-lg{font-weight:600!important;font-size:1rem!important}
@@ -244,8 +245,8 @@ img{max-width:100%;height:auto;vertical-align:middle}
 .cx_main-menu.navbar-light .navbar-nav > li.dropdown .sublist li a{padding-right:1rem;padding-left:1rem;color:#000;font-size:.8em}
 .cx_main-menu.navbar-light .navbar-nav > li.dropdown .sublist .cx_nav-vertical.nav-tabs .nav-item.show .nav-link,.cx_main-menu.navbar-light .navbar-nav > li.dropdown .sublist .cx_nav-vertical.nav-tabs .nav-link.active{background-color:rgba(221,33,20,.1);border-radius:40px}
 .cx_nav-vertical.nav.nav-tabs{border-bottom:0}
-.tab-pane .no-result,.tab-pane .no-data{font-size:.8em;color:#777}
-.tab-pane .no-result:before,.tab-pane .no-data:before{content:"";display:block;width:46px;height:46px;margin:0 auto;background:url(../images/empty-folder.png) no-repeat center;background-size:auto;background-size:contain}
+.tab-pane .no-result,.tab-pane .no-data, .no-data{font-size:.8em;color:#777}
+.tab-pane .no-result:before,.tab-pane .no-data:before, .no-data:before{content:"";display:block;width:46px;height:46px;margin:0 auto;background:url(../images/empty-folder.png) no-repeat center;background-size:auto;background-size:contain}
 .cx_wg-cart-empty:before{content:"";display:block;width:46px;height:46px;margin:0 auto 7px;background:url(../images/empty-folder.png) no-repeat center;background-size:auto;background-size:contain}
 .cx_wg-cart-empty{padding: 5em 2em;text-align: center;}
 .cx_main-menu.navbar-light .navbar-nav > li > a.nav-link .badge{font-family:'Montserrat',sans-serif!important}
@@ -307,7 +308,7 @@ img{max-width:100%;height:auto;vertical-align:middle}
 .cx_theme .bg-primary .custom-select{background:url(../images/keyboard_arrow_down-light.svg) no-repeat center right;background-size:16px}
 .cx_headline,.product-filter .filter-title,.title{position:relative}
 .cx_headline{font-weight:700; text-transform:uppercase}
-h2.cx_headline{font-size:1.6rem;}
+h2.cx_headline, .cx_page-header h1{font-size:1.6rem;}
 .cx_headline:after{width:140px; height:117px;content:"";position:absolute;bottom:-38px;left:50%; margin-left:-70px;z-index: -1; background:url(../images/liquid_title.svg)}
 .cx_dsc{}
 @media(max-width:767px) {
@@ -764,3 +765,5 @@ to{transform:scale(1)}
 .breadcrumb .current-item{ color:var(--gray)}
 .breadcrumb a:hover,.breadcrumb a:focus{color:var(--primary)}
 /**/
+.cx_page-header{padding:1rem 1.3rem; background-color: var(--light);border-bottom: 1px solid #d9e3f0;}
+.cx_page-header h1{font-weight: 700;text-transform: uppercase;margin-bottom: 0;}

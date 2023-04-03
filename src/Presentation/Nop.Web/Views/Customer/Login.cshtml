@@ -15,11 +15,17 @@
     var registerUrl = Url.RouteUrl("Register", new { returnUrl = this.Context.Request.Query["returnUrl"] }, webHelper.GetCurrentRequestProtocol());
 }
 <div class="page login-page">
-    <div class="page-title">
-        <h1>@T("Account.Login.Welcome")</h1>
+    <div class="page-title cx_page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>@T("Account.Login.Welcome")</h1>
+                </div>
+            </div>
+        </div>
     </div>
     @await Html.PartialAsync("_ExternalAuthentication.Errors")
-    <div class="page-body">
+    <div class="page-body container py-5">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.LoginTop, additionalData = Model })
         <div class="customer-blocks">
             @if (Model.RegistrationType == UserRegistrationType.Disabled)

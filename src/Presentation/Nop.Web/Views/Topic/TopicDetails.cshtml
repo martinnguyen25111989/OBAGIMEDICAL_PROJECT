@@ -93,10 +93,16 @@
 }
 <div class="page topic-page" id="ph-topic">
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.TopicDetailsTop, additionalData = Model })
-    <div class="page-title" id="ph-title">
-        <h1>@Model.Title</h1>
+    <div class="page-title cx_page-header" id="ph-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>@Model.Title</h1>
+                </div>
+            </div>
+        </div> 
     </div>
-    <div class="page-body">
+    <div class="page-body container py-5">
         @Html.Raw(Model.Body)
     </div>
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.TopicDetailsBottom, additionalData = Model })
