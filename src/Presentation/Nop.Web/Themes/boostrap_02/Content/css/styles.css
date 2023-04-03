@@ -683,7 +683,7 @@ h2.cx_headline, .cx_page-header h1{font-size:1.6rem;}
 .no-shipping-options{text-align:center;margin:4% 0}
 .cx_login-box{border:1px solid rgba(0,0,0,0.1);padding:2em;border-radius:12px}
 @media (min-width: 992px) {
-.cx_new-wrapper.register-block{padding-left:40px}
+.cx_new-wrapper.register-block{padding-right:40px}
 }
 .theme-custom .nivo-directionNav a{background-color:transparent!important;text-decoration:none;background-image:none!important}
 .theme-custom a.nivo-prevNav:before,.theme-custom a.nivo-nextNav:before{font-family:'annasdrapery'!important;font-size:46px;color:#000}
