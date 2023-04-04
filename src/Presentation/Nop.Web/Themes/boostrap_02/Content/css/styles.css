@@ -136,6 +136,7 @@
 .cx_wg-cart-body .name a,.cx_rec-product-in .name > a{color:var(--dark);font-weight:600;text-decoration:none}
 .cx_wg-cart-body .price,.cx_wg-cart-body .quantity,.cx_wg-cart-body .attributes,.cx_rec-product-in, .cx_product-card .description{font-size:.8em}
 .cx_wg-cart-foot .buttons{padding-top:1em}
+.cx_sku-cart {display:block; font-size:0.8em;margin-bottom: 0;}
 .text-max-width-100{max-width:50px}
 @media (min-width:365px) {
 .grid-item,.grid-sizer{max-width:48%}
@@ -359,7 +360,7 @@ h2.cx_headline, .cx_page-header h1{font-size:1.6rem;}
 .cx_img{position:absolute;top:0;right:0;bottom:0;left:0;background-size:cover;background-position:center}
 .cx_img:before{opacity:0;position:absolute;top:0;right:0;bottom:0;left:0;content:"";background:rgba(0,0,0,.3)}
 .cx_product-title{font-family: 'Open Sans', sans-serif !important;font-weight:700;margin-top:1em;font-size: 14px;}
-.cx_product-title a{transition:color .25s ease-in-out;color:var(--dark);text-decoration:none!important}
+.cx_product-title a, .product-name{transition:color .25s ease-in-out;color:var(--dark);text-decoration:none!important}
 .cx_product-card .price.actual-price{ color:var(--primary) !important; font-weight:700; font-size:14px}
 .price-value-4{color:var(--primary) !important;}
 .cx_product-card.card{padding:.5rem .5rem 1.25rem;border-color:#D9E3F0;transition:all .15s ease-in-out}
