@@ -136,7 +136,10 @@
 .cx_wg-cart-body .name a,.cx_rec-product-in .name > a{color:var(--dark);font-weight:600;text-decoration:none}
 .cx_wg-cart-body .price,.cx_wg-cart-body .quantity,.cx_wg-cart-body .attributes,.cx_rec-product-in, .cx_product-card .description{font-size:.8em}
 .cx_wg-cart-foot .buttons{padding-top:1em}
-.cx_sku-cart {display:block; font-size:0.8em;margin-bottom: 0;}
+.cx_sku-cart {margin-bottom: 0; color:var(--gray-dark)}
+.cx_product-name-cart{font-weight: 700;}
+.cx_sku-cart, .cx_product-name-cart, .cx_product-unit-price{font-size:0.8em;}
+.cx_sku-cart, .cx_product-unit-price{display:block;}
 .text-max-width-100{max-width:50px}
 @media (min-width:365px) {
 .grid-item,.grid-sizer{max-width:48%}

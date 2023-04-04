@@ -54,7 +54,7 @@
                     <div class="buttons mb-2">
                         @if (Model.IsEditable)
                         {
-                            <button type="submit" name="updatecart" id="updatecart" class="button-2 update-wishlist-button btn btn-outline-secondary">@T("Wishlist.UpdateCart")</button>
+                            <button type="submit" name="updatecart" id="updatecart" class="button-2 update-wishlist-button btn btn-outline-secondary"><i class="icon-refresh mr-1"></i> @T("Wishlist.UpdateCart")</button>
                         }
                         @if (Model.DisplayAddToCart)
                         {
@@ -62,7 +62,7 @@
                         }
                         @if (Model.IsEditable && Model.EmailWishlistEnabled)
                         {
-                            <button type="button" class="button-2 email-a-friend-wishlist-button btn btn-outline-secondary" onclick="setLocation('@Url.RouteUrl("EmailWishlist")')">@T("Wishlist.EmailAFriend")</button>
+                            <button type="button" class="button-2 email-a-friend-wishlist-button btn btn-outline-secondary" onclick="setLocation('@Url.RouteUrl("EmailWishlist")')"><i class="icon-send mr-1"></i> @T("Wishlist.EmailAFriend")</button>
                         }
                     </div>
                     <div class="table-wrapper table-responsive ">
@@ -136,8 +136,8 @@
                                             {
                                                 <label class="td-title cx_sku-cart">@T("ShoppingCart.SKU"): <span class="sku-number">@item.Sku</span></label>
                                             }
-                                            <a href="@(Url.RouteUrl<Product>(new { SeName = item.ProductSeName }))" class="product-name">@item.ProductName</a>
-                                            <label class="td-title">@T("ShoppingCart.UnitPrice"): <span class="product-unit-price">@item.UnitPrice</span></label>
+                                            <a href="@(Url.RouteUrl<Product>(new { SeName = item.ProductSeName }))" class="product-name cx_product-name-cart">@item.ProductName</a>
+                                            <label class="td-title cx_product-unit-price">@T("ShoppingCart.UnitPrice"): <span class="product-unit-price">@item.UnitPrice</span></label>
                                             
                                             @if (!string.IsNullOrEmpty(item.AttributeInfo))
                                             {
@@ -219,7 +219,7 @@
                                             <td class="remove-from-cart">
                                                 <input type="checkbox" name="removefromcart" id="removefromcart@(item.Id)" value="@(item.Id)" aria-label="@T("ShoppingCart.Remove")" />
                                                 <button type="button" name="updatecart" class="remove-btn btn btn-light btn-circle" onclick="$('#removefromcart@(item.Id)').attr('checked', true); $('#updatecart').click();">
-                                                    <i class=""></i>
+                                                    <i class="icon-close"></i>
                                                 </button>
                                             </td>
                                         }
