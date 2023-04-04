@@ -234,7 +234,7 @@ img{max-width:100%;height:auto;vertical-align:middle}
 }
 .cx_product-card .card-footer{border-top:0}
 .news-item-page h1{font-size:1.4em;padding:0 0 .3em}
-.not-found-page .topic-block,.apply-vendor-page .topic-block{padding:100px 0}
+.not-found-page .topic-block{padding:100px 0}
 .cx_head-toggle-sidebar{margin:.5em 0}
 .cx_btn-filter-mb{outline:0;border:0;display:flex;justify-content:space-between;width:100%;background-color:transparent;border-bottom:1px solid #eee}
 .cx_btn-filter-mb:before,.cx_btn-filter-mb:after{content:"";width:43px;height:43px}
