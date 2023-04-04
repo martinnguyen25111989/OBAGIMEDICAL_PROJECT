@@ -54,19 +54,19 @@
                     <div class="buttons mb-2">
                         @if (Model.IsEditable)
                         {
-                            <button type="submit" name="updatecart" id="updatecart" class="button-2 update-wishlist-button btn">@T("Wishlist.UpdateCart")</button>
+                            <button type="submit" name="updatecart" id="updatecart" class="button-2 update-wishlist-button btn btn-outline-secondary">@T("Wishlist.UpdateCart")</button>
                         }
                         @if (Model.DisplayAddToCart)
                         {
-                            <button type="submit" name="addtocartbutton" class="button-2 wishlist-add-to-cart-button btn">@T("ShoppingCart.AddToCart")</button>
+                            <button type="submit" name="addtocartbutton" class="button-2 wishlist-add-to-cart-button btn btn-outline-secondary">@T("ShoppingCart.AddToCart")</button>
                         }
                         @if (Model.IsEditable && Model.EmailWishlistEnabled)
                         {
-                            <button type="button" class="button-2 email-a-friend-wishlist-button btn" onclick="setLocation('@Url.RouteUrl("EmailWishlist")')">@T("Wishlist.EmailAFriend")</button>
+                            <button type="button" class="button-2 email-a-friend-wishlist-button btn btn-outline-secondary" onclick="setLocation('@Url.RouteUrl("EmailWishlist")')">@T("Wishlist.EmailAFriend")</button>
                         }
                     </div>
                     <div class="table-wrapper table-responsive ">
-                        <table class="cart table table-sm table-with-checkbox">
+                        <table class="cart table table-sm table-with-checkbox table-borderless">
                             <colgroup>
                                 @if (Model.DisplayAddToCart)
                                 {
