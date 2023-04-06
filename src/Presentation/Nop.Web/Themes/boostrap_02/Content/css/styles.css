@@ -140,6 +140,12 @@
 .cx_product-name-cart{font-weight: 700;}
 .cx_sku-cart, .cx_product-name-cart, .cx_product-unit-price{font-size:0.8em;}
 .cx_sku-cart, .cx_product-unit-price{display:block;}
+.cart .remove-from-cart input[type=checkbox] {display:none}
+.cart td,
+.data-table td,
+.forum-table td {
+  min-width: 50px;
+}
 .text-max-width-100{max-width:50px}
 @media (min-width:365px) {
 .grid-item,.grid-sizer{max-width:48%}
