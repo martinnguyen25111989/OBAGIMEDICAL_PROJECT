@@ -763,9 +763,11 @@ to{transform:scale(1)}
 .cx_footer{ background-color:#F3F8FF}
 @media (min-width: 769px) {
 .footer-block .list{display:block!important;background:none;padding:0}
-.footer-block .title{margin:0 0 15px;background:0 0;padding:0;cursor:auto}
+.footer-block .title{margin:0 0 15px;background:0 0;padding:0 !important;cursor:auto; background:none !important}
 }
-.footer-block .title{background:url(../Themes/DefaultClean/Content/images/toggle-white.png) right center no-repeat;cursor:pointer}
+.footer-block .title{background:url(../images/plus.svg) right center no-repeat;cursor:pointer; background-size:24px;}
+.footer-block.information .title, .footer-block.customer-service .title, .footer-block.my-account .title{padding:15px 0;border-bottom: 1px solid #ddd;margin-bottom: 0;}
+.footer-block.follow-us .social .title, .footer-block.follow-us .newsletter .title{background:none} 
 .footer-block .list{display:none;margin:0 0 20px}
 .footer-block .list a{display:block;padding:10px 15px;line-height:20px}
 /***/

@@ -1,0 +1,1 @@
+"ConnectionString": "Data Source=194.233.69.127;Initial Catalog=dbomegica;Persist Security Info=True;User ID=sa;Password=Langtu0411;TrustServerCertificate=True",
