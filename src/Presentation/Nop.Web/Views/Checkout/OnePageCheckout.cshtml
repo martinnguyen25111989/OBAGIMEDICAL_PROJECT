@@ -42,10 +42,16 @@
 <script src="~/js/public.onepagecheckout.js" asp-location="Footer"></script>
 
 <div class="page checkout-page">
-    <div class="page-title">
-        <h1>@T("Checkout")</h1>
+    <div class="page-title cx_page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>@T("Checkout")</h1>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="page-body checkout-data">
+    <div class="page-body checkout-data container py-5">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.OpcContentBefore, additionalData = Model })
         <ol class="opc" id="checkout-steps">
             <li id="opc-billing" class="tab-section allow">
