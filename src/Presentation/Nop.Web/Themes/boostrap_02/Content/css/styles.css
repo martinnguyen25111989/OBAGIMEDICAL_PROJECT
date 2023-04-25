@@ -765,14 +765,23 @@ to{transform:scale(1)}
 @media (min-width: 769px) {
 .footer-block .list{display:block!important;background:none;padding:0}
 .footer-block .title{margin:0 0 15px !important;background:0 0;padding:0 !important;cursor:auto; background:none !important; border:none !important}
+.footer-block.follow-us{margin-top:0 !important}
+.footer-lower.cx_footer-lower{display:block !important}
 }
 .footer-block .title{background:url(../images/plus.svg) right center no-repeat;cursor:pointer; background-size:24px;}
 .footer-block.information .title, .footer-block.customer-service .title, .footer-block.my-account .title{padding:15px 0;border-bottom: 1px solid #ddd;margin-bottom: 0;}
+.footer-block.follow-us{margin-top:20px}
 .footer-block.follow-us .social .title, .footer-block.follow-us .newsletter .title{background:none} 
 .footer-block .list{display:none;margin:0 0 20px}
 .footer-block .list a{display:block;padding:10px 15px;line-height:20px}
+.footer-lower.cx_footer-lower{display:none}
 /***/
-.breadcrumb{margin:0 0 50px;background-color:#F3F8FF !important;padding:5px 30px !important;border-bottom:1px solid #D9E3F0}
+.breadcrumb {
+  margin: 0 0 50px;
+  background-color: #F3F8FF !important;
+  padding: 5px 30px !important;
+  border-bottom: 1px solid #D9E3F0
+}
 .breadcrumb ul{font-size:0; margin-bottom: 0;}
 .breadcrumb li{display:inline-block}
 .breadcrumb li *{display:inline-block;margin:0 5px;font-size:12px}
